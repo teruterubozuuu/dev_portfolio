@@ -1,0 +1,55 @@
+.post-parent-cont{
+    display: flex;
+    justify-content: center;
+    padding:10px 30px;
+    margin:20px 30px;
+}
+
+
+.post-child-cont{
+    background-color: rgb(9, 7, 12);
+    justify-content: start;
+    width:55%;
+    border-radius: 10px;
+    padding:30px;
+}
+
+.pfp{
+    max-width:80px;
+    border-radius: 5px;
+    height:80px;
+}
+.username-name{
+    margin-top:-10px;
+    display:flex;
+    margin-bottom:-20px;
+}
+
+.post-detail{
+    display:flex;
+}
+
+.description{
+    margin-top:2%;
+}
+
+.border-line{
+    margin-top:20px;
+    border-top:1px solid rgba(255, 255, 255, 0.151);
+}
+
+.likes-comment-cont{
+    margin-top:20px;
+}
+
+.bi-star, .bi-chat-quote{
+    font-size:25px;
+    margin-right:20px;
+    cursor: pointer;
+    color:rgba(255, 255, 255, 0.247);
+    transition:0.5s ease;
+}
+
+.bi-star:hover,.bi-chat-quote:hover{
+    color:white;
+}
