@@ -2,3 +2,8 @@ body{
   background-color: #08060b;
   font-family: "Inter", sans-serif;
 }
+
+@theme {
+    --primary: #F8AA2C;
+    --secondary: #ffff;
+}

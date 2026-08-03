@@ -5,44 +5,41 @@ import proj2 from "../assets/project2.png";
 import proj3 from "../assets/project3.png";
 import proj4 from "../assets/project4.png";
 import proj5 from "../assets/proj5.png";
+import CoverPhoto from "../components/header/CoverPhoto";
+import WebsiteTitle from "../components/header/WebsiteTitle";
+import HeaderDetails from "../components/header/HeaderDetails";
 
 
 export default function Layout({children}) {
+  const skills = [
+    {id: "html", label: "HTML"}, 
+    {id:"css", label: "CSS"},
+    {id: "javascript", label: "JavaScript"},
+    {id: "typescript", label: "TypeScript"},
+    {id: "react", label: "React"},
+    {id: "nextjs", label: "Next.js"},
+    {id: "tailwindCSS", label: "TailwindCSS"},
+    {id: "shadcn", label: "Shadcn/ui"},
+    {id: "figma", label: "Figma"},
+    {id: "git", label: "Git"},
+    {id: "github", label: "Github"},
+    {id: "vercel", label: "Vercel"}
+  ];
+
   return (
     <div className="flex justify-center flex-wrap text-white">
       <header className="w-full md:max-w-[900px] mx-auto relative">
-
-        <div className="p-5">
-          <h1 className="text-2xl font-bold">
-            <span className="text-[#F8AA2C]">&lt;</span> joyjoy.dev{" "}
-            <span className="text-[#F8AA2C]">/&gt;</span>
-          </h1>
-        </div>
-
-        <div className="bg-[#0D0A12] w-full h-[180px] flex justify-center items-center absolute z-0">
-          <img src={coverphoto} alt="Cover Photo" className="w-full h-full object-cover" />
-        </div>
-
-        <div className="flex items-center absolute z-50 top-[220px] left-[30px]">
-          <img
-            src={pfp}
-            alt="Image"
-            className="w-[120px] border-[5px] border-[#08060b]"
-          />
-          <div className="mx-2 mt-10 md:mt-11">
-            <h1 className="font-semibold md:text-2xl">Joylynne Esportuno</h1>
-            <a href="https://github.com/teruterubozuuu" className="font-light text-sm md:text-base hover:underline text-[#F8AA2C] transition-all ease-in" target="_blank" rel="noopener noreferrer">
-              @teruterubozuuu
-            </a>
-            <p className="font-light text-sm md:text-base">
-              Computer Science Student & Aspiring Software Engineer
-            </p>
-          </div>
-        </div>
+        <WebsiteTitle/>
+        <CoverPhoto coverphoto={coverphoto}/>
+        <HeaderDetails pfp={pfp}/>
       </header>
-      <main className='border-t border-[#181818] absolute p-5 top-[360px] flex justify-center w-full md:max-w-[900px] mx-auto'>
+      
+      <main className='border-t border-[#181818] absolute p-5 md:top-[360px] top-85 flex justify-center w-full md:max-w-[900px] mx-auto'>
             <div className="space-y-4">
       <div className=" flex md:flex-row flex-col  gap-4 justify-center">
+        {/**
+         * ABOUT ME
+         */}
         <section className="md:rounded-lg bg-[#0D0A12] p-8">
           <div className="flex items-center gap-3 mb-4">
             <svg
@@ -73,6 +70,9 @@ export default function Layout({children}) {
         </section>
 
         <div className="space-y-4">
+          {/**
+           * SKILLS
+           */}
           <section className="p-8 md:rounded-lg bg-[#0D0A12] ">
             <div className="flex items-center gap-3 mb-4">
               <svg
@@ -88,24 +88,12 @@ export default function Layout({children}) {
               <p className="text-xl w-[220px] font-bold">Skills</p>
             </div>
             <div className="gap-2 flex flex-wrap">
-              <p className="border border-[#F8AA2C] p-2 rounded-lg text-[12px]">
-                HTML
-              </p>
-              <p className="border border-[#F8AA2C] p-2 rounded-lg text-[12px]">
-                CSS
-              </p>
-              <p className="border border-[#F8AA2C] p-2 rounded-lg text-[12px]">
-                JavaScript
-              </p>
-              <p className="border border-[#F8AA2C] p-2 rounded-lg text-[12px]">
-                React
-              </p>
-              <p className="border border-[#F8AA2C] p-2 rounded-lg text-[12px]">
-                TailwindCSS
-              </p>
-              <p className="border border-[#F8AA2C] p-2 rounded-lg text-[12px]">
-                Figma
-              </p>
+              {
+                skills.map((skill)=> (
+                <p className="border border-[#F8AA2C] p-2 rounded-lg text-[12px]" key={skill.id}>{skill.label}</p>
+
+                ))
+              }                
             </div>
           </section>
           <section className="p-8 md:rounded-lg bg-[#0D0A12] space-y-3">
