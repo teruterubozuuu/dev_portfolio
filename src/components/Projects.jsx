@@ -6,13 +6,13 @@ export default function Projects() {
   const [openPrev, setOpenPrev] = useState(null);
 
   return (
-    <section className="md:rounded-lg bg-[#0D0A12] border border-[#181818] md:p-8 py-8 px-10 ">
+    <section className="md:rounded-lg border border-[#171717] md:p-8 py-8 px-10 ">
       <span className="text-xl font-bold flex gap-3 items-center mb-4">
         <i className="bi bi-kanban text-[#F8AA2C]"></i>Projects
       </span>
       {projects.map((project) => (
         <div className=" p-2 flex gap-4" key={project.id}>
-          <div className="flex  md:flex-row flex-col md:items-start md:justify-start items-center justify-center gap-4 rounded-md bg-[#100d16]  flex-1 p-5">
+          <div className="flex  md:flex-row flex-col md:items-start md:justify-start items-center justify-center gap-4 rounded-md flex-1 p-5">
             <img
               src={project.photo}
               alt={project.id}

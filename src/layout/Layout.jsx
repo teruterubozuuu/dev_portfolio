@@ -31,7 +31,7 @@ export default function Layout({ children }) {
       </header>
 
       <main className="absolute md:top-[360px] top-85 flex justify-center  pb-5">
-          <div className="justify-center space-y-4 w-full md:max-w-200">
+          <div className=" justify-center space-y-4 w-full md:max-w-200">
             {/* ABOUT ME */}
             <AboutMe />
                             
