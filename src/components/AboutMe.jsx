@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutMe() {
   return (
-    <section className="md:rounded-lg bg-[#0D0A12] border border-[#181818] md:p-8 py-8 px-10">
+    <section className="md:rounded-lg border border-[#171717] md:p-8 py-8 px-10">
       <div className="flex items-center gap-3 mb-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
