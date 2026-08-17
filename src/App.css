@@ -1,9 +1,4 @@
 body{
-  background-color: #08060b;
+  background-color: #0b080f;
   font-family: "Inter", sans-serif;
-}
-
-@theme {
-    --primary: #F8AA2C;
-    --secondary: #ffff;
 }
